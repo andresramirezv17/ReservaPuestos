@@ -6,7 +6,7 @@ exports[`CardItemSmall Test should match snapshot 1`] = `
     class="makeStyles-paper-2"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center MuiGrid-justifyContent-xs-space-between"
     >
       <div
         class="MuiGrid-root makeStyles-item-3 MuiGrid-item MuiGrid-grid-xs-8"
