@@ -5,12 +5,14 @@ import { UserReserve } from 'pages/MainMenu/context/models/UserReserve';
 import { useStyles } from './styles';
 import { CardWorkSpaces } from '../../components/CardWorkSpaces';
 import { WorkspaceContext } from '../../context/WorkspaceContext';
+import { ModalAlert } from '../../components/ModalAlert';
 
 export const WorkSpaces: React.FC = () => {
   const classes = useStyles();
   const [reserves, setreserves] = useState<UserReserve[]>();
   const [showReserves, setshowReserves] = useState(false);
   const { workspaceUser } = useContext(WorkspaceContext);
+  const [showAlert, setshowAlert] = useState(false);
 
   useEffect(() => {
     console.log('workspaces ', workspaceUser.reserves);
@@ -18,6 +20,11 @@ export const WorkSpaces: React.FC = () => {
       setshowReserves(true);
     }
   }, [workspaceUser]);
+
+  const showModal = (condition: boolean) => {
+    setshowAlert(condition);
+    console.log('condition a cambiar', condition);
+  };
 
   return (
     <div>
@@ -37,11 +44,20 @@ export const WorkSpaces: React.FC = () => {
           {showReserves &&
             workspaceUser.reserves?.map((item, index) => (
               <Grid key={index} item md={6} xs={12}>
-                <CardWorkSpaces reserve={item} />
+                <CardWorkSpaces reserve={item} showModal={showModal} />
               </Grid>
             ))}
         </Grid>
       </div>
+
+      <ModalAlert
+        showModal={showAlert}
+        Title="Información"
+        body="¿Deseas realizar el checkin de este puesto?"
+        btnCancel="Cancelar"
+        btnContinue="continuar"
+        showAlert={showModal}
+      />
     </div>
   );
 };

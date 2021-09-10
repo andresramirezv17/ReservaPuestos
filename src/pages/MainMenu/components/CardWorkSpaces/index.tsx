@@ -9,9 +9,13 @@ import { useStyles } from './styles';
 
 export interface ReserveCardProps {
   reserve: UserReserve;
+  showModal: (condition: boolean) => void;
 }
 
-export const CardWorkSpaces: React.FC<ReserveCardProps> = ({ reserve }) => {
+export const CardWorkSpaces: React.FC<ReserveCardProps> = ({
+  reserve,
+  showModal,
+}) => {
   const classes = useStyles();
   return (
     <Card className={classes.mainBox}>
@@ -47,10 +51,15 @@ export const CardWorkSpaces: React.FC<ReserveCardProps> = ({ reserve }) => {
             variant="contained"
             disableRipple
             className={classes.buttonCheckin}
+            onClick={() => showModal(true)}
           >
             Realizar Check-in
           </Button>
-          <Button variant="contained" className={classes.buttonChekout}>
+          <Button
+            variant="contained"
+            className={classes.buttonChekout}
+            onClick={() => showModal(false)}
+          >
             Finalizar Reserva
           </Button>
         </div>
