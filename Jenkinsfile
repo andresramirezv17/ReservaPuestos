@@ -19,7 +19,7 @@ pipeline{
             }
          	stage('test '){
                 steps {
-                    sh 'npm run test'                    
+                    sh 'npm run test:coverage'                    
                 }
             }
             stage('compilar '){
