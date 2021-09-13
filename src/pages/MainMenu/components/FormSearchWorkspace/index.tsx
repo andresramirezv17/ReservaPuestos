@@ -18,9 +18,9 @@ import { ReserveContext } from 'pages/MainMenu/context/ReserveContext';
 import { useStyles } from './styles';
 import { CardSearchWorkSpace } from '../CardSearchWorkSpace';
 
-export const FormSearchWorkspace = () => {
+export const FormSearchWorkspace: React.FC = () => {
   const [origenError, setorigenError] = useState('');
-  const [section, setsection] = useState('1');
+  const [section, setsection] = useState('');
   const [selectedDate, setSelectedDate] = useState(
     moment(new Date()).add(1, 'days'),
   );
@@ -30,7 +30,7 @@ export const FormSearchWorkspace = () => {
   const [inHour, setinHour] = useState(new Date('2021-09-07T07:00:00'));
   const [EndHour, setEndHour] = useState(new Date('2021-09-07T19:00:00'));
 
-  const [floor, setfloor] = useState('1');
+  const [floor, setfloor] = useState('');
   const classes = useStyles();
 
   const handleDateChange = (date: Date | null) => {

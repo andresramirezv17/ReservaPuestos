@@ -46,8 +46,8 @@ exports[`FormSearch test should match with snapshot 1`] = `
       class="MuiFormControl-root makeStyles-formControl-3"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-        data-shrink="true"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+        data-shrink="false"
         id="demo-simple-select-outlined-label"
       >
         Piso
@@ -71,7 +71,7 @@ exports[`FormSearch test should match with snapshot 1`] = `
           aria-hidden="true"
           class="MuiSelect-nativeInput"
           tabindex="-1"
-          value="1"
+          value=""
         />
         <svg
           aria-hidden="true"
@@ -88,7 +88,7 @@ exports[`FormSearch test should match with snapshot 1`] = `
           class="PrivateNotchedOutline-root-6 MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="PrivateNotchedOutline-legendLabelled-8 PrivateNotchedOutline-legendNotched-9"
+            class="PrivateNotchedOutline-legendLabelled-8"
           >
             <span>
               Piso
@@ -101,8 +101,8 @@ exports[`FormSearch test should match with snapshot 1`] = `
       class="MuiFormControl-root makeStyles-formControl-3"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-        data-shrink="true"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+        data-shrink="false"
         id="demo-simple-select-outlined-label"
       >
         Sección
@@ -126,7 +126,7 @@ exports[`FormSearch test should match with snapshot 1`] = `
           aria-hidden="true"
           class="MuiSelect-nativeInput"
           tabindex="-1"
-          value="1"
+          value=""
         />
         <svg
           aria-hidden="true"
@@ -143,7 +143,7 @@ exports[`FormSearch test should match with snapshot 1`] = `
           class="PrivateNotchedOutline-root-6 MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="PrivateNotchedOutline-legendLabelled-8 PrivateNotchedOutline-legendNotched-9"
+            class="PrivateNotchedOutline-legendLabelled-8"
           >
             <span>
               Sección
