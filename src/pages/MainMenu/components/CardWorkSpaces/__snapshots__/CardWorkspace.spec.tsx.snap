@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardWorkspace user test it should match smnpashot 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiCard-root makeStyles-mainBox-1 MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <div
+      class="MuiCardContent-root makeStyles-cardContent-2"
+    >
+      <div
+        class="makeStyles-headerCard-3"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-h6"
+        >
+          Edicio 
+          Torre Central
+        </h6>
+        <p
+          class="MuiTypography-root MuiTypography-body1"
+        >
+          Fecha: 
+          10/09/2021
+        </p>
+      </div>
+      <div
+        class="makeStyles-bodyCard-4"
+      >
+        <div>
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            <span
+              style="font-weight: bold;"
+            >
+              Piso:
+            </span>
+             
+            Piso 1
+          </p>
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            <span
+              style="font-weight: bold;"
+            >
+              Puesto:
+            </span>
+             
+            P1A1
+          </p>
+        </div>
+        <div>
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            <span
+              style="font-weight: bold;"
+            >
+              Sección: 
+            </span>
+            Sección A
+          </p>
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            <span
+              style="font-weight: bold;"
+            >
+              Hora: 
+            </span>
+            7:00
+             a 
+            15:00
+          </p>
+        </div>
+      </div>
+      <div
+        style="border-bottom: 1px solid grey; margin: 10px;"
+      />
+      <div
+        class="makeStyles-footerCard-5"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCheckin-7"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Realizar Check-in
+          </span>
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonChekout-8"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Finalizar Reserva
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

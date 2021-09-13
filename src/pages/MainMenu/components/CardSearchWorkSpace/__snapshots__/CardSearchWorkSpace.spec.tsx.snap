@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardSearchWorkSpace test it should match snapshot 1`] = `
+<div>
+  <div
+    class="makeStyles-root-1"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body1"
+    >
+      Busqueda: 
+    </p>
+    <div
+      class="makeStyles-divSearch-3"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        Torre Central 2
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        Piso 1
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        Seccion A
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        14/09/2021
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        7:00am a 7:00pm
+      </p>
+    </div>
+  </div>
+</div>
+`;

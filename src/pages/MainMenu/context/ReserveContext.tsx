@@ -35,7 +35,7 @@ export const useStateContainer = (initialState: WorkSpaceParameter) => {
   const [floor, setfloor] = useState('Piso 1');
   const [section, setsection] = useState('Seccion A');
   const [date, setdate] = useState(
-    moment(new Date()).add('days', 1).format('DD/MM/YYYY'),
+    moment(new Date()).add(1, 'days').format('DD/MM/YYYY'),
   );
 
   const searchWorkplaces = () => {

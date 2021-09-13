@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { LandingPage } from 'pages/Landing';
-import { FoodMenuPage } from 'pages/FoodMenu';
 import { MainMenu } from 'pages/MainMenu';
 import { SessionContext } from 'context/SessionContext';
 import { ConditionalRoute } from 'components/ConditionalRoute';

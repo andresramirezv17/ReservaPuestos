@@ -5,6 +5,6 @@ export interface FloorFound {
 }
 
 export interface Floors {
-  id?: string;
+  id?: number;
   floorsResult?: FloorFound[];
 }

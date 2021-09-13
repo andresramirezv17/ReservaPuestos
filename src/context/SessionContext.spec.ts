@@ -21,7 +21,7 @@ describe('Session Context text', () => {
 
   it('should create session', () => {
     const sessionId = '123';
-    const userName = 'food';
+    const userName = 'user';
     sessionService.createSession.mockReturnValue(sessionId);
 
     act(() => {

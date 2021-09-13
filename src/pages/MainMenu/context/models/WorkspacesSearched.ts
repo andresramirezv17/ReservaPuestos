@@ -4,12 +4,11 @@ export interface TotalWorkspaces {
   idFloor?: number;
   idSection?: number;
   available?: boolean;
-  length?: number;
   initialHour: string;
   endHour: string;
 }
 
 export interface WorkspacesSearched {
-  id?: string;
+  id?: number;
   workplaces?: TotalWorkspaces[];
 }

@@ -38,10 +38,14 @@ export const ModalAlert: React.FC<ModalProps> = ({
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button color="primary" onClick={() => showAlert(false)}>
+        <Button
+          data-testid="cancel"
+          color="primary"
+          onClick={() => showAlert(false)}
+        >
           {btnCancel}
         </Button>
-        <Button color="primary" autoFocus>
+        <Button data-testid="continue" color="primary" autoFocus>
           {btnContinue}
         </Button>
       </DialogActions>

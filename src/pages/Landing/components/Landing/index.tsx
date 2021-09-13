@@ -46,6 +46,7 @@ export const Landing: React.FC<LandingProps> = ({ onContinue }) => {
           </Grid>
           <Grid item md={8} xs={12}>
             <TextField
+              inputProps={{ 'data-testid': 'input-username' }}
               className={classes.input}
               fullWidth
               error={showError}
@@ -61,6 +62,7 @@ export const Landing: React.FC<LandingProps> = ({ onContinue }) => {
               autoComplete="off"
             />
             <TextField
+              inputProps={{ 'data-testid': 'password-username' }}
               type="password"
               className={classes.inputPass}
               fullWidth
@@ -76,6 +78,7 @@ export const Landing: React.FC<LandingProps> = ({ onContinue }) => {
               autoComplete="off"
             />
             <Button
+              data-testid="continue"
               fullWidth
               variant="contained"
               color="primary"

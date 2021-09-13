@@ -14,11 +14,6 @@ export const getSingle = (workplace?: Partial<UserReserve>): UserReserve =>
     ...workplace,
   });
 
-export const getList = (
-  ...workplace: Partial<UserReserve>[]
-): UserReserve[] => {
-  if (workplace.length === 0) {
-    return cloneDeep([getSingle()]);
-  }
-  return workplace.map((partial) => getSingle(partial));
+export const getList = (): UserReserve[] => {
+  return cloneDeep([getSingle()]);
 };

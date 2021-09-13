@@ -24,6 +24,10 @@ export const CardSearchWorkSpace: React.FC = () => {
     }
   }, [workplaces]);
 
+  const handleReserve = () => {
+    console.log('Modal para reserva');
+  };
+
   return (
     <div className={classes.root}>
       <Typography>Busqueda: </Typography>
@@ -56,7 +60,12 @@ export const CardSearchWorkSpace: React.FC = () => {
                       {item.initialHour} a {item.endHour}
                     </Typography>
                   </div>
-                  <Button className={classes.buttonReserve}>Reservar</Button>
+                  <Button
+                    onClick={handleReserve}
+                    className={classes.buttonReserve}
+                  >
+                    Reservar
+                  </Button>
                 </div>
               </div>
             </CardContent>

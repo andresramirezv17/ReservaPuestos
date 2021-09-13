@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Workspace User test should match with snapshot 1`] = `
+<div>
+  <div>
+    <h5
+      class="MuiTypography-root makeStyles-title-1 MuiTypography-h5"
+    >
+      Puestos reservados
+    </h5>
+    <p
+      class="MuiTypography-root MuiTypography-body1"
+    >
+      Estos son los espacios que has reservado
+    </p>
+    <div
+      style="width: 100%; display: inline-flex; flex-wrap: wrap; gap: 15px;"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+      />
+    </div>
+  </div>
+</div>
+`;

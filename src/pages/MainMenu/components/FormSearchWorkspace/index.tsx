@@ -22,10 +22,10 @@ export const FormSearchWorkspace = () => {
   const [origenError, setorigenError] = useState('');
   const [section, setsection] = useState('1');
   const [selectedDate, setSelectedDate] = useState(
-    moment(new Date()).add('days', 1),
+    moment(new Date()).add(1, 'days'),
   );
   const [initialdate, setinitialdate] = useState(
-    moment(new Date()).add('days', 1),
+    moment(new Date()).add(1, 'days'),
   );
   const [inHour, setinHour] = useState(new Date('2021-09-07T07:00:00'));
   const [EndHour, setEndHour] = useState(new Date('2021-09-07T19:00:00'));

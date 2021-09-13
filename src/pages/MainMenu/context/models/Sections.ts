@@ -5,6 +5,6 @@ export interface SectionFound {
 }
 
 export interface Sections {
-  id?: string;
+  id?: number;
   sectionsResult?: SectionFound[];
 }
