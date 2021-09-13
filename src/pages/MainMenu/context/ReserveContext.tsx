@@ -43,14 +43,15 @@ export const useStateContainer = (initialState: WorkSpaceParameter) => {
       setworkplaces(resultSearch);
     });
   };
+
   const obtainFloors = () => {
     ReserveServices.getFloors().then((resultFloor) => setfloors(resultFloor));
   };
 
-  const obtainSections = (id?: number) => {
-    ReserveServices.getSections().then((resultSections) => {
-      setsections(resultSections);
-    });
+  const obtainSections = () => {
+    ReserveServices.getSections().then((resultSections) =>
+      setsections(resultSections),
+    );
   };
 
   const changeParameter = (parameter: string, value: string) => {

@@ -15,7 +15,6 @@ export const WorkSpaces: React.FC = () => {
   const [showAlert, setshowAlert] = useState(false);
 
   useEffect(() => {
-    console.log('workspaces ', workspaceUser.reserves);
     if (typeof workspaceUser !== 'undefined') {
       setshowReserves(true);
     }
@@ -23,7 +22,6 @@ export const WorkSpaces: React.FC = () => {
 
   const showModal = (condition: boolean) => {
     setshowAlert(condition);
-    console.log('condition a cambiar', condition);
   };
 
   return (

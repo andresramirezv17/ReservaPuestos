@@ -1,4 +1,5 @@
 import nock from 'nock';
+import { act } from '@testing-library/react';
 import { UserWorkspace } from '../context/models/UserWorkspace';
 import { WorkspacesSearched } from '../context/models/WorkspacesSearched';
 import { Floors } from '../context/models/Floors';
@@ -39,14 +40,18 @@ describe('workspace services test', () => {
     expect(data).toEqual(workspace);
   });
   it('should fetch floors', async () => {
+    const promise = Promise.resolve();
     nock('http://localhost').get('/floors').reply(200, Floors);
     const data = await workspaceServices.getFloors();
     expect(data).toEqual(Floors);
+    await act(() => promise);
   });
   it('should fetch sections', async () => {
+    const promise = Promise.resolve();
     nock('http://localhost').get('/sections').reply(200, Sections);
     const data = await workspaceServices.getSections();
     expect(data).toEqual(Sections);
+    await act(() => promise);
   });
   it('should fetch workspacesSearched', async () => {
     nock('http://localhost').get('/workspaces').reply(200, workspaceSearched);

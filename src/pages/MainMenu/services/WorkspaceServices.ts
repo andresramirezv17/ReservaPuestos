@@ -17,9 +17,11 @@ export const getSearchedWorkplaces = (
 export const getFloors = (idBuilding?: number): Promise<Floors> =>
   axios
     .get<Floors>('floors', { params: { idBuilding } })
-    .then((res) => res.data);
+    .then((res) => res.data)
+    .catch((err) => err);
 
 export const getSections = (idFloor?: number): Promise<Sections> =>
   axios
-    .get<Floors>('sections', { params: { idFloor } })
-    .then((res) => res.data);
+    .get<Sections>('sections', { params: { idFloor } })
+    .then((res) => res.data)
+    .catch((err) => err);

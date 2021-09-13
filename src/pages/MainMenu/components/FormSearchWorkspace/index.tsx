@@ -47,14 +47,16 @@ export const FormSearchWorkspace: React.FC = () => {
     },
   } = useContext(ReserveContext);
 
-  useEffect(() => {
-    obtainFloors();
-    obtainSections(1);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
   const handleSearch = () => {
     searchWorkplaces();
   };
+
+  useEffect(() => {
+    obtainFloors();
+    setTimeout(() => {
+      obtainSections();
+    }, 500);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <form autoComplete="off" className={classes.root}>
