@@ -9,7 +9,7 @@ exports[`Landing test should match snapshot 1`] = `
       class="MuiGrid-root makeStyles-container-1 MuiGrid-container"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-md-5"
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-md-5"
       >
         <div
           class="MuiGrid-root MuiGrid-item"
