@@ -63,14 +63,15 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
             class="MuiFormControl-root makeStyles-formControl-4"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink="false"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
               id="demo-simple-select-outlined-label"
             >
               Piso
             </label>
             <div
               class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              data-testid="floor"
             >
               <div
                 aria-haspopup="listbox"
@@ -88,7 +89,7 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
                 aria-hidden="true"
                 class="MuiSelect-nativeInput"
                 tabindex="-1"
-                value=""
+                value="Piso 1"
               />
               <svg
                 aria-hidden="true"
@@ -105,7 +106,7 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
                 class="PrivateNotchedOutline-root-7 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-9"
+                  class="PrivateNotchedOutline-legendLabelled-9 PrivateNotchedOutline-legendNotched-10"
                 >
                   <span>
                     Piso
@@ -118,14 +119,15 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
             class="MuiFormControl-root makeStyles-formControl-4"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink="false"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
               id="demo-simple-select-outlined-label"
             >
               Sección
             </label>
             <div
               class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              data-testid="section"
             >
               <div
                 aria-haspopup="listbox"
@@ -143,7 +145,7 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
                 aria-hidden="true"
                 class="MuiSelect-nativeInput"
                 tabindex="-1"
-                value=""
+                value="Sección A"
               />
               <svg
                 aria-hidden="true"
@@ -160,7 +162,7 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
                 class="PrivateNotchedOutline-root-7 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-9"
+                  class="PrivateNotchedOutline-legendLabelled-9 PrivateNotchedOutline-legendNotched-10"
                 >
                   <span>
                     Sección
@@ -174,6 +176,7 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
           >
             <div
               class="MuiFormControl-root MuiTextField-root"
+              data-testid="date"
               format="dd/MM/yyyy"
               style="margin-left: 13px;"
             >
@@ -191,14 +194,15 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
                   class="MuiInputBase-input MuiInput-input"
                   readonly=""
                   type="text"
-                  value="14/09/2021"
+                  value="17/09/2021"
                 />
               </div>
               
             </div>
             <div
               class="MuiFormControl-root MuiTextField-root"
-              format="hh:mm a"
+              data-testid="inHour"
+              format="HH:mm"
             >
               <label
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
@@ -214,14 +218,15 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
                   class="MuiInputBase-input MuiInput-input"
                   readonly=""
                   type="text"
-                  value="07:00 AM"
+                  value="07:00"
                 />
               </div>
               
             </div>
             <div
               class="MuiFormControl-root MuiTextField-root"
-              format="hh:mm a"
+              data-testid="endHour"
+              format="HH:mm"
             >
               <label
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
@@ -237,7 +242,7 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
                   class="MuiInputBase-input MuiInput-input"
                   readonly=""
                   type="text"
-                  value="07:00 PM"
+                  value="17:00"
                 />
               </div>
               
@@ -245,6 +250,7 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
           </div>
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-btnSearch-6"
+            data-testid="searchW"
             tabindex="0"
             type="button"
           >
@@ -291,17 +297,19 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
             <p
               class="MuiTypography-root MuiTypography-body1"
             >
-              Seccion A
+              Sección A
             </p>
             <p
               class="MuiTypography-root MuiTypography-body1"
             >
-              14/09/2021
+              17/09/2021
             </p>
             <p
               class="MuiTypography-root MuiTypography-body1"
             >
-              7:00am a 7:00pm
+              7:00
+               a 
+              19:00
             </p>
           </div>
         </div>

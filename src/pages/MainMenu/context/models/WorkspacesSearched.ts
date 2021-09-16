@@ -10,5 +10,11 @@ export interface TotalWorkspaces {
 
 export interface WorkspacesSearched {
   id?: number;
-  workplaces?: TotalWorkspaces[];
+  workplace?: string;
+  building?: string;
+  floor?: string;
+  section?: string;
+  available?: boolean;
+  initialHour?: string;
+  endHour?: string;
 }

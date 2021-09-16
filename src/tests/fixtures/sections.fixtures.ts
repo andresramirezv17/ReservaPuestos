@@ -4,7 +4,7 @@ import cloneDeep from 'lodash/cloneDeep';
 export const getSingle = (section?: Partial<SectionFound>): SectionFound =>
   cloneDeep({
     idSection: 1,
-    idBuilding: 1,
+    idFloor: 1,
     name: 'Piso 1',
     ...section,
   });

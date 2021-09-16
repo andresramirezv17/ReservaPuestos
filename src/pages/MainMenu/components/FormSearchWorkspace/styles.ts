@@ -39,6 +39,9 @@ export const useStyles = makeStyles(() =>
       width: '91%',
       padding: '13px',
       borderRadius: '5px',
+      '&:hover': {
+        backgroundColor: '#093a79',
+      },
     },
   }),
 );

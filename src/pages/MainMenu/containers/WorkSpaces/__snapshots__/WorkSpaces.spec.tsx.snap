@@ -18,7 +18,122 @@ exports[`Workspace User test should match with snapshot 1`] = `
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
-      />
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
+        >
+          <div
+            class="MuiPaper-root MuiCard-root makeStyles-mainBox-4 MuiPaper-elevation1 MuiPaper-rounded"
+          >
+            <div
+              class="MuiCardContent-root makeStyles-cardContent-5"
+            >
+              <div
+                class="makeStyles-headerCard-6"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-h6"
+                >
+                  Edicio 
+                  Torre Central
+                </h6>
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  Fecha: 
+                  10/09/2021
+                </p>
+              </div>
+              <div
+                class="makeStyles-bodyCard-7"
+              >
+                <div>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1"
+                  >
+                    <span
+                      style="font-weight: bold;"
+                    >
+                      Piso:
+                    </span>
+                     
+                    Piso 1
+                  </p>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1"
+                  >
+                    <span
+                      style="font-weight: bold;"
+                    >
+                      Puesto:
+                    </span>
+                     
+                    P1A1
+                  </p>
+                </div>
+                <div>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1"
+                  >
+                    <span
+                      style="font-weight: bold;"
+                    >
+                      Sección: 
+                    </span>
+                    Sección A
+                  </p>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1"
+                  >
+                    <span
+                      style="font-weight: bold;"
+                    >
+                      Hora: 
+                    </span>
+                    7:00
+                     a 
+                    15:00
+                  </p>
+                </div>
+              </div>
+              <div
+                style="border-bottom: 1px solid grey; margin: 10px;"
+              />
+              <div
+                class="makeStyles-footerCard-8"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCheckin-11"
+                  data-testid="docheckin"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    Realizar Check-in
+                  </span>
+                </button>
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonChekout-12"
+                  data-testid="endReserve"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    Finalizar Reserva
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

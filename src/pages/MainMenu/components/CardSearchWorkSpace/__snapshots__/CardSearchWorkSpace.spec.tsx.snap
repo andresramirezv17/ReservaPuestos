@@ -15,30 +15,90 @@ exports[`CardSearchWorkSpace test it should match snapshot 1`] = `
     >
       <p
         class="MuiTypography-root MuiTypography-body1"
-      >
-        Torre Central 2
-      </p>
+      />
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      />
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      />
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      />
       <p
         class="MuiTypography-root MuiTypography-body1"
       >
-        Piso 1
-      </p>
-      <p
-        class="MuiTypography-root MuiTypography-body1"
-      >
-        Seccion A
-      </p>
-      <p
-        class="MuiTypography-root MuiTypography-body1"
-      >
-        14/09/2021
-      </p>
-      <p
-        class="MuiTypography-root MuiTypography-body1"
-      >
-        7:00am a 7:00pm
+         a 
       </p>
     </div>
+    <div>
+      <div
+        class="MuiPaper-root MuiCard-root makeStyles-mainBox-5 MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <div
+          class="MuiCardContent-root"
+        >
+          <div
+            style="display: flex; flex-direction: row; justify-content: space-between;"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1"
+              style="font-weight: bold;"
+            >
+              Puesto:
+               
+              <span
+                style="font-weight: normal;"
+              >
+                P2D1
+              </span>
+            </p>
+            <div>
+              <div
+                style="display: flex; flex-direction: row;"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                  <path
+                    d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                  />
+                </svg>
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  7:00
+                   a 
+                  5:00
+                </p>
+              </div>
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-buttonReserve-6"
+                data-testid="reservar"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Reservar
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div />
   </div>
 </div>
 `;

@@ -3,7 +3,6 @@ import { createStyles, makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles(() =>
   createStyles({
     mainBox: {
-      cursor: 'pointer',
       width: '100%',
       marginTop: '15px',
     },
@@ -38,6 +37,11 @@ export const useStyles = makeStyles(() =>
     },
     title: {
       fontSize: '20px',
+    },
+    checkin: {
+      fontSize: '0.87rem',
+      color: 'green',
+      fontWeight: 'bold',
     },
     buttonCheckin: {
       fontWeight: 'bold',

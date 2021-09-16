@@ -6,7 +6,9 @@ import {
   DialogTitle,
   DialogContent,
   DialogContentText,
+  Typography,
 } from '@material-ui/core';
+import { UserWorkspace } from 'pages/MainMenu/context/models/UserWorkspace';
 
 export interface ModalProps {
   showModal: boolean;
@@ -14,7 +16,10 @@ export interface ModalProps {
   body: string;
   btnCancel: string;
   btnContinue: string;
-  showAlert: (condition: boolean) => void;
+  showAlert: (condition: boolean, type: string) => void;
+  handleAction: (type: string) => void;
+  action: string;
+  error?: string;
 }
 
 export const ModalAlert: React.FC<ModalProps> = ({
@@ -24,6 +29,9 @@ export const ModalAlert: React.FC<ModalProps> = ({
   btnCancel,
   btnContinue,
   showAlert,
+  handleAction,
+  action,
+  error,
 }) => {
   return (
     <Dialog
@@ -36,16 +44,24 @@ export const ModalAlert: React.FC<ModalProps> = ({
         <DialogContentText id="alert-dialog-description">
           {body}
         </DialogContentText>
+        {error !== '' && (
+          <Typography style={{ color: 'red' }}>{error}</Typography>
+        )}
       </DialogContent>
       <DialogActions>
         <Button
           data-testid="cancel"
           color="primary"
-          onClick={() => showAlert(false)}
+          onClick={() => showAlert(false, action)}
         >
           {btnCancel}
         </Button>
-        <Button data-testid="continue" color="primary" autoFocus>
+        <Button
+          data-testid="continue"
+          color="primary"
+          autoFocus
+          onClick={() => handleAction(action)}
+        >
           {btnContinue}
         </Button>
       </DialogActions>

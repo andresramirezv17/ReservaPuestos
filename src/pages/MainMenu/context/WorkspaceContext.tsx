@@ -3,23 +3,27 @@ import { UserWorkspace } from './models/UserWorkspace';
 import * as WorkspaceService from '../services/WorkspaceServices';
 
 export interface WorkSpaceState {
-  workSpace?: UserWorkspace;
-  varpueba?: boolean;
+  workSpace?: UserWorkspace[];
 }
 
 export const useStateContainer = (initialState: WorkSpaceState) => {
   const [workspaceUser, setworkspaceUser] = useState(
-    initialState.workSpace || {},
+    initialState.workSpace || [],
   );
-  const [prueba, setprueba] = useState(initialState.varpueba || true);
+
+  const getWorkSpaces = () => {
+    WorkspaceService.getReserves().then((reserves) => {
+      console.log('resertvas ', reserves);
+
+      setworkspaceUser(reserves);
+    });
+  };
 
   useEffect(() => {
-    WorkspaceService.getReserves(1).then((reserves) =>
-      setworkspaceUser(reserves),
-    );
+    getWorkSpaces();
   }, []);
 
-  return { workspaceUser, prueba };
+  return { workspaceUser, getWorkSpaces };
 };
 
 export const WorkspaceContext = createContext<

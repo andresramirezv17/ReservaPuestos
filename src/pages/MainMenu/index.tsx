@@ -4,7 +4,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import EventSeatIcon from '@material-ui/icons/EventSeat';
 import BusinessIcon from '@material-ui/icons/Business';
-import { Switch, Route, Link } from 'react-router-dom';
 import { useStyles } from './styles';
 import { WorkSpaces } from './containers/WorkSpaces';
 import { ReserveWorkSpace } from './containers/ReserveWorkSpaces';

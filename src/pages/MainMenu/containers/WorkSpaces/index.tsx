@@ -1,18 +1,20 @@
 import { Grid, Typography } from '@material-ui/core';
 import React, { useContext, useState, useEffect } from 'react';
 import { UserWorkspace } from 'pages/MainMenu/context/models/UserWorkspace';
-import { UserReserve } from 'pages/MainMenu/context/models/UserReserve';
+import DesktopAccessDisabledIcon from '@material-ui/icons/DesktopAccessDisabled';
 import { useStyles } from './styles';
 import { CardWorkSpaces } from '../../components/CardWorkSpaces';
 import { WorkspaceContext } from '../../context/WorkspaceContext';
 import { ModalAlert } from '../../components/ModalAlert';
+import * as services from '../../services/WorkspaceServices';
 
 export const WorkSpaces: React.FC = () => {
   const classes = useStyles();
-  const [reserves, setreserves] = useState<UserReserve[]>();
+  const [reserve, setreserve] = useState<UserWorkspace>();
   const [showReserves, setshowReserves] = useState(false);
-  const { workspaceUser } = useContext(WorkspaceContext);
+  const { workspaceUser, getWorkSpaces } = useContext(WorkspaceContext);
   const [showAlert, setshowAlert] = useState(false);
+  const [showCancelAlert, setshowCancelAlert] = useState(false);
 
   useEffect(() => {
     if (typeof workspaceUser !== 'undefined') {
@@ -20,8 +22,53 @@ export const WorkSpaces: React.FC = () => {
     }
   }, [workspaceUser]);
 
-  const showModal = (condition: boolean) => {
-    setshowAlert(condition);
+  const showModal = (condition: boolean, type: string) => {
+    if (type === 'checkin') {
+      setshowAlert(condition);
+    } else {
+      setshowCancelAlert(condition);
+    }
+  };
+
+  const showModalInfo = (
+    condition: boolean,
+    type: string,
+    item: UserWorkspace,
+  ) => {
+    setreserve(item);
+    if (type === 'checkin') {
+      setshowAlert(condition);
+    } else {
+      setshowCancelAlert(condition);
+    }
+  };
+
+  const handleAction = (type: string) => {
+    if (type === 'checkin') {
+      services.checkinReserve(reserve?.id, reserve, true).then((status) => {
+        if (status === 200) {
+          getWorkSpaces();
+          setshowAlert(false);
+        }
+      });
+    } else {
+      services.endReserve(reserve?.id).then((status) => {
+        getWorkSpaces();
+        setshowCancelAlert(false);
+        const item = {
+          workplace: reserve?.workplace,
+          building: reserve?.building,
+          floor: reserve?.floor,
+          section: reserve?.section,
+          available: true,
+          initialHour: reserve?.initialHour,
+          endHour: reserve?.endHour,
+          isChekin: false,
+          id: reserve?.idWorkSpace,
+        };
+        services.updateWorkSpace(reserve?.idWorkSpace, item, true);
+      });
+    }
   };
 
   return (
@@ -40,13 +87,23 @@ export const WorkSpaces: React.FC = () => {
       >
         <Grid container spacing={3}>
           {showReserves &&
-            workspaceUser.reserves?.map((item, index) => (
-              <Grid key={index} item md={6} xs={12}>
-                <CardWorkSpaces reserve={item} showModal={showModal} />
+            workspaceUser.map((item, index) => (
+              <Grid key={item.id} item md={6} xs={12}>
+                <CardWorkSpaces reserve={item} showModal={showModalInfo} />
               </Grid>
             ))}
         </Grid>
       </div>
+      {workspaceUser.length === 0 && (
+        <div className={classes.boxNoReserves}>
+          <DesktopAccessDisabledIcon
+            style={{ fontSize: '5em', color: 'rgb(9, 38, 121)' }}
+          />
+          <Typography className={classes.noReservesText}>
+            Todavia no tienes reservas
+          </Typography>
+        </div>
+      )}
 
       <ModalAlert
         showModal={showAlert}
@@ -55,6 +112,18 @@ export const WorkSpaces: React.FC = () => {
         btnCancel="Cancelar"
         btnContinue="continuar"
         showAlert={showModal}
+        handleAction={handleAction}
+        action="checkin"
+      />
+      <ModalAlert
+        showModal={showCancelAlert}
+        Title="Información"
+        body="¿Deseas Finalizar la reserva?"
+        btnCancel="Cancelar"
+        btnContinue="continuar"
+        showAlert={showModal}
+        handleAction={handleAction}
+        action="end"
       />
     </div>
   );

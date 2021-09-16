@@ -12,6 +12,8 @@ describe('ModalAlert test', () => {
       btnCancel: 'Cancelar',
       btnContinue: 'Continuar',
       showAlert: jest.fn(),
+      handleAction: jest.fn(),
+      action: 'chekin',
     };
   });
 
@@ -24,5 +26,11 @@ describe('ModalAlert test', () => {
     const button = getByTestId('cancel');
     fireEvent.click(button);
     expect(props.showAlert).toHaveBeenCalled();
+  });
+  it('Should call handleAction when button is clicked', () => {
+    const { getByTestId } = render(<ModalAlert {...props} />);
+    const button = getByTestId('continue');
+    fireEvent.click(button);
+    expect(props.handleAction).toHaveBeenCalled();
   });
 });

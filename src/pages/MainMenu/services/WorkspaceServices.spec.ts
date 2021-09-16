@@ -1,25 +1,35 @@
 import nock from 'nock';
+
+import { matches } from 'lodash';
 import { act } from '@testing-library/react';
 import { UserWorkspace } from '../context/models/UserWorkspace';
 import { WorkspacesSearched } from '../context/models/WorkspacesSearched';
 import { Floors } from '../context/models/Floors';
 import { Sections } from '../context/models/Sections';
 import * as workspaceServices from './WorkspaceServices';
-import * as workspacefixture from '../../../tests/fixtures/workspace.fixture';
+import { UserReserve } from '../context/models/UserReserve';
+
 import * as floorfixure from '../../../tests/fixtures/floors.fixture';
 import * as sectionfixure from '../../../tests/fixtures/sections.fixtures';
-import * as workspaceSearchedFixture from '../../../tests/fixtures/workspaceSearched.fixtures';
 
 describe('workspace services test', () => {
   let workspace: UserWorkspace;
   let Floors: Floors;
   let Sections: Sections;
   let workspaceSearched: WorkspacesSearched;
+  let reserve: UserReserve;
 
   beforeEach(() => {
     workspace = {
       id: 1,
-      reserves: workspacefixture.getList(),
+      building: 'Torre Central',
+      date: '10/09/2021',
+      floor: 'Piso 1',
+      section: 'Sección A',
+      workplace: 'P1A1',
+      initialHour: '7:00',
+      endHour: '15:00',
+      isChekin: true,
     };
     Floors = {
       id: 1,
@@ -31,7 +41,13 @@ describe('workspace services test', () => {
     };
     workspaceSearched = {
       id: 1,
-      workplaces: workspaceSearchedFixture.getList(),
+      workplace: 'P2D1',
+      available: true,
+      building: 'Torre Central',
+      floor: 'Piso 1',
+      section: 'Sección A',
+      initialHour: '7:00',
+      endHour: '5:00',
     };
   });
   it('should fetch workspaces', async () => {
@@ -57,5 +73,43 @@ describe('workspace services test', () => {
     nock('http://localhost').get('/workspaces').reply(200, workspaceSearched);
     const data = await workspaceServices.getSearchedWorkplaces();
     expect(data).toEqual(workspaceSearched);
+  });
+  it('should checkin workspace', async () => {
+    nock('http://localhost').post('/userreserves', matches(reserve)).reply(201);
+    const value = await workspaceServices.doReserve(reserve);
+    expect(value).toBeTruthy();
+  });
+  it('should delete workspace', async () => {
+    nock('http://localhost').delete('/userreserves/1').reply(200);
+    const value = await workspaceServices.endReserve(1);
+    expect(value).toBeTruthy();
+  });
+  it('should do checkin', async () => {
+    nock('http://localhost').put('/userreserves/1').reply(200);
+    const value = await workspaceServices.checkinReserve(1, workspace, true);
+    expect(value).toBeTruthy();
+  });
+  it('should do not checkin', async () => {
+    nock('http://localhost').put('/userreserves/1').replyWithError('');
+    const value = await workspaceServices.checkinReserve(1, workspace, true);
+    expect(value).toEqual('Error');
+  });
+  it('should update workspace state', async () => {
+    nock('http://localhost').put('/workspaces/1').reply(200);
+    const value = await workspaceServices.updateWorkSpace(
+      1,
+      workspaceSearched,
+      true,
+    );
+    expect(value).toBeTruthy();
+  });
+  it('should not update workspace state', async () => {
+    nock('http://localhost').put('/workspaces/1').replyWithError('Error');
+    const value = await workspaceServices.updateWorkSpace(
+      0,
+      workspaceSearched,
+      true,
+    );
+    expect(value).toEqual('Error');
   });
 });

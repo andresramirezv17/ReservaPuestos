@@ -1,6 +1,6 @@
 export interface SectionFound {
   idSection: number;
-  idBuilding: number;
+  idFloor: number;
   name: string;
 }
 

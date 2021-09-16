@@ -4,7 +4,6 @@ import * as sessionService from '../services/sessionService';
 
 export const useStateContainer = (initialState: SessionState = {}) => {
   const [username, setUsername] = useState(initialState.username);
-  const [password, setpassword] = useState('');
   const [sessionId, setSessionId] = useState(initialState.sessionId);
   const usernameRef = useRef(false);
 

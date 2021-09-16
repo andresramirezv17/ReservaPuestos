@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import React, { FC } from 'react';
-import { RouteComponentProps, Route, Redirect } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import { RouteProps } from 'react-router';
 
 interface ProtectedRouteProps extends RouteProps {

@@ -83,7 +83,8 @@ exports[`CardWorkspace user test it should match smnpashot 1`] = `
         class="makeStyles-footerCard-5"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCheckin-7"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCheckin-8"
+          data-testid="docheckin"
           tabindex="0"
           type="button"
         >
@@ -94,7 +95,8 @@ exports[`CardWorkspace user test it should match smnpashot 1`] = `
           </span>
         </button>
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonChekout-8"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonChekout-9"
+          data-testid="endReserve"
           tabindex="0"
           type="button"
         >
