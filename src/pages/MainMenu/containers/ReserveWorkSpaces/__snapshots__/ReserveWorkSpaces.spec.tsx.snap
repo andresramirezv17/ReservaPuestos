@@ -61,17 +61,17 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
           </div>
           <div
             class="MuiFormControl-root makeStyles-formControl-4"
+            data-testid="floorForm"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink="true"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
               id="demo-simple-select-outlined-label"
             >
               Piso
             </label>
             <div
               class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
-              data-testid="floor"
             >
               <div
                 aria-haspopup="listbox"
@@ -89,7 +89,7 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
                 aria-hidden="true"
                 class="MuiSelect-nativeInput"
                 tabindex="-1"
-                value="Piso 1"
+                value=""
               />
               <svg
                 aria-hidden="true"
@@ -106,7 +106,7 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
                 class="PrivateNotchedOutline-root-7 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-9 PrivateNotchedOutline-legendNotched-10"
+                  class="PrivateNotchedOutline-legendLabelled-9"
                 >
                   <span>
                     Piso
@@ -117,17 +117,17 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
           </div>
           <div
             class="MuiFormControl-root makeStyles-formControl-4"
+            data-testid="sectionForm"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink="true"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
               id="demo-simple-select-outlined-label"
             >
               Sección
             </label>
             <div
               class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
-              data-testid="section"
             >
               <div
                 aria-haspopup="listbox"
@@ -145,7 +145,7 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
                 aria-hidden="true"
                 class="MuiSelect-nativeInput"
                 tabindex="-1"
-                value="Sección A"
+                value=""
               />
               <svg
                 aria-hidden="true"
@@ -162,7 +162,7 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
                 class="PrivateNotchedOutline-root-7 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-9 PrivateNotchedOutline-legendNotched-10"
+                  class="PrivateNotchedOutline-legendLabelled-9"
                 >
                   <span>
                     Sección
@@ -176,7 +176,7 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
           >
             <div
               class="MuiFormControl-root MuiTextField-root"
-              data-testid="date"
+              data-testid="dateSelector"
               format="dd/MM/yyyy"
               style="margin-left: 13px;"
             >
@@ -273,48 +273,14 @@ exports[`ReserveWorkspace test should match with snapshot 1`] = `
         >
           Buscar Puestos
         </h5>
-        <div
-          class="makeStyles-root-11"
+        <h5
+          class="MuiTypography-root MuiTypography-h5"
         >
-          <p
-            class="MuiTypography-root MuiTypography-body1"
-          >
-            Busqueda: 
-          </p>
-          <div
-            class="makeStyles-divSearch-13"
-          >
-            <p
-              class="MuiTypography-root MuiTypography-body1"
-            >
-              Torre Central 2
-            </p>
-            <p
-              class="MuiTypography-root MuiTypography-body1"
-            >
-              Piso 1
-            </p>
-            <p
-              class="MuiTypography-root MuiTypography-body1"
-            >
-              Sección A
-            </p>
-            <p
-              class="MuiTypography-root MuiTypography-body1"
-            >
-              17/09/2021
-            </p>
-            <p
-              class="MuiTypography-root MuiTypography-body1"
-            >
-              7:00
-               a 
-              19:00
-            </p>
-          </div>
-        </div>
+          Cargando...
+        </h5>
       </div>
     </div>
+    <div />
   </div>
 </div>
 `;

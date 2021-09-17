@@ -1,12 +1,13 @@
 import { Grid, Typography } from '@material-ui/core';
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect, lazy, Suspense } from 'react';
 import { UserWorkspace } from 'pages/MainMenu/context/models/UserWorkspace';
 import DesktopAccessDisabledIcon from '@material-ui/icons/DesktopAccessDisabled';
 import { useStyles } from './styles';
-import { CardWorkSpaces } from '../../components/CardWorkSpaces';
 import { WorkspaceContext } from '../../context/WorkspaceContext';
 import { ModalAlert } from '../../components/ModalAlert';
 import * as services from '../../services/WorkspaceServices';
+
+const CardWorkSpaces = lazy(() => import('../../components/CardWorkSpaces'));
 
 export const WorkSpaces: React.FC = () => {
   const classes = useStyles();
@@ -89,7 +90,11 @@ export const WorkSpaces: React.FC = () => {
           {showReserves &&
             workspaceUser.map((item, index) => (
               <Grid key={item.id} item md={6} xs={12}>
-                <CardWorkSpaces reserve={item} showModal={showModalInfo} />
+                <Suspense
+                  fallback={<Typography variant="h5">Cargando...</Typography>}
+                >
+                  <CardWorkSpaces reserve={item} showModal={showModalInfo} />
+                </Suspense>
               </Grid>
             ))}
         </Grid>

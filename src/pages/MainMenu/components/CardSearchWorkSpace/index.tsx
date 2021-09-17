@@ -70,7 +70,7 @@ export const CardSearchWorkSpace: React.FC<cardSearchProps> = ({
                       <Button
                         onClick={() => showModal(true, item)}
                         className={classes.buttonReserve}
-                        data-testid="reservar"
+                        data-testid="reserveBtn"
                       >
                         Reservar
                       </Button>
@@ -94,3 +94,5 @@ export const CardSearchWorkSpace: React.FC<cardSearchProps> = ({
     </div>
   );
 };
+
+export default CardSearchWorkSpace;

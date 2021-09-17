@@ -42,7 +42,7 @@ export const endReserve = (id?: number) =>
   axios
     .delete(`http://localhost:3001/userreserves/${id}`)
     .then((response) => response.status)
-    .catch((err) => err);
+    .catch((err) => 'Error');
 
 export const doReserve = (item?: UserReserve) =>
   axios.post('userreserves', { ...item }).then((response) => response.status);

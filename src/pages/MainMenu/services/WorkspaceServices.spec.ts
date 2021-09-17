@@ -84,6 +84,12 @@ describe('workspace services test', () => {
     const value = await workspaceServices.endReserve(1);
     expect(value).toBeTruthy();
   });
+  it('should not delete workspace', async () => {
+    nock('http://localhost').delete('/userreserves/1').replyWithError('');
+    const value = await workspaceServices.endReserve(1);
+    expect(value).toEqual('Error');
+  });
+
   it('should do checkin', async () => {
     nock('http://localhost').put('/userreserves/1').reply(200);
     const value = await workspaceServices.checkinReserve(1, workspace, true);

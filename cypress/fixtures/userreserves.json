@@ -1,0 +1,26 @@
+[
+    {
+      "building": "Torre Central",
+      "endHour": "17:00",
+      "floor": "Piso 1",
+      "initialHour": "7:00",
+      "isChekin": false,
+      "section": "Sección A",
+      "date": "17/09/2021",
+      "workplace": "P1A2",
+      "idWorkSpace": 2,
+      "id": 1
+    },
+    {
+      "building": "Torre Central",
+      "endHour": "17:00",
+      "floor": "Piso 1",
+      "initialHour": "7:00",
+      "isChekin": false,
+      "section": "Sección A",
+      "date": "20/09/2021",
+      "workplace": "P1A1",
+      "idWorkSpace": 1,
+      "id": 2
+    }
+  ]

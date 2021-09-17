@@ -101,7 +101,7 @@ describe('CardSearchWorkSpace test', () => {
         <CardSearchWorkSpace {...props} />
       </ReserveContext.Provider>,
     );
-    const button = getByTestId('reservar');
+    const button = getByTestId('reserveBtn');
     fireEvent.click(button);
     expect(props.showModal).toHaveBeenCalled();
   });

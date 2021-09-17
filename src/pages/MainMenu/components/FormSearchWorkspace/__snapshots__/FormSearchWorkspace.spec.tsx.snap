@@ -44,6 +44,7 @@ exports[`FormSearch test should match with snapshot 1`] = `
     </div>
     <div
       class="MuiFormControl-root makeStyles-formControl-3"
+      data-testid="floorForm"
     >
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
@@ -54,7 +55,6 @@ exports[`FormSearch test should match with snapshot 1`] = `
       </label>
       <div
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
-        data-testid="floor"
       >
         <div
           aria-haspopup="listbox"
@@ -98,6 +98,7 @@ exports[`FormSearch test should match with snapshot 1`] = `
     </div>
     <div
       class="MuiFormControl-root makeStyles-formControl-3"
+      data-testid="sectionForm"
     >
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
@@ -108,7 +109,6 @@ exports[`FormSearch test should match with snapshot 1`] = `
       </label>
       <div
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
-        data-testid="section"
       >
         <div
           aria-haspopup="listbox"
@@ -155,7 +155,7 @@ exports[`FormSearch test should match with snapshot 1`] = `
     >
       <div
         class="MuiFormControl-root MuiTextField-root"
-        data-testid="date"
+        data-testid="dateSelector"
         format="dd/MM/yyyy"
         style="margin-left: 13px;"
       >

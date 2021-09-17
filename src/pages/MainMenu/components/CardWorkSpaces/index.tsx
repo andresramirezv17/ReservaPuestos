@@ -76,3 +76,5 @@ export const CardWorkSpaces: React.FC<ReserveCardProps> = ({
     </Card>
   );
 };
+
+export default CardWorkSpaces;

@@ -148,8 +148,13 @@ describe('FormSearch test', () => {
         <FormSearchWorkspace />
       </ReserveContext.Provider>,
     );
-    const button = getByTestId('section');
+
+    const button = getByTestId('searchW');
     fireEvent.click(button);
+    expect(searchWorkplaces).toHaveBeenCalled();
+
+    const floorForm = getByTestId('sectionForm');
+    fireEvent.click(floorForm);
     expect(changeParameter).toHaveBeenCalledTimes(0);
   });
 });

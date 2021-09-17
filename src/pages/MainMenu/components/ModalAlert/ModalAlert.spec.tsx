@@ -23,13 +23,13 @@ describe('ModalAlert test', () => {
   });
   it('Should call showAlert when button is clicked', () => {
     const { getByTestId } = render(<ModalAlert {...props} />);
-    const button = getByTestId('cancel');
+    const button = getByTestId('cancelModal');
     fireEvent.click(button);
     expect(props.showAlert).toHaveBeenCalled();
   });
   it('Should call handleAction when button is clicked', () => {
     const { getByTestId } = render(<ModalAlert {...props} />);
-    const button = getByTestId('continue');
+    const button = getByTestId('continueModal');
     fireEvent.click(button);
     expect(props.handleAction).toHaveBeenCalled();
   });

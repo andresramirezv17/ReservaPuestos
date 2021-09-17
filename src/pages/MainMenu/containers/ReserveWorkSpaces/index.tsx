@@ -1,6 +1,5 @@
 import { Grid, Typography } from '@material-ui/core';
-import React, { useState, useContext } from 'react';
-import { CardSearchWorkSpace } from 'pages/MainMenu/components/CardSearchWorkSpace';
+import React, { useState, useContext, lazy, Suspense } from 'react';
 import { ModalAlert } from 'pages/MainMenu/components/ModalAlert';
 import { ReserveContext } from 'pages/MainMenu/context/ReserveContext';
 import { WorkspaceContext } from 'pages/MainMenu/context/WorkspaceContext';
@@ -10,6 +9,9 @@ import * as services from '../../services/WorkspaceServices';
 
 import { useStyles } from './styles';
 
+const CardSearchWorkSpace = lazy(
+  () => import('pages/MainMenu/components/CardSearchWorkSpace'),
+);
 export const ReserveWorkSpace: React.FC = () => {
   const classes = useStyles();
   const [showAlert, setshowAlert] = useState(false);
@@ -86,7 +88,11 @@ export const ReserveWorkSpace: React.FC = () => {
           <Typography variant="h5" className={classes.title}>
             Buscar Puestos
           </Typography>
-          <CardSearchWorkSpace showModal={showModalInfo} />
+          <Suspense
+            fallback={<Typography variant="h5">Cargando...</Typography>}
+          >
+            <CardSearchWorkSpace showModal={showModalInfo} />
+          </Suspense>
         </Grid>
       </Grid>
       <ModalAlert

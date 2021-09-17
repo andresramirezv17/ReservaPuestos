@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "workplace": "P2D1",
+      "available": true,
+      "building": "Torre Central",
+      "floor": "Piso 1",
+      "section": "Sección A",
+      "initialHour": "7:00",
+      "endHour": "5:00"
+    },
+    {
+      "workplace": "P1A2",
+      "building": "Torre Central",
+      "floor": "Piso 1",
+      "section": "Sección A",
+      "available": false,
+      "initialHour": "7:00",
+      "endHour": "17:00",
+      "isChekin": false,
+      "id": 2
+    }
+]

@@ -116,6 +116,8 @@ exports[`MainMenu test should match with snapshot 1`] = `
           Todavia no tienes reservas
         </p>
       </div>
+      <div />
+      <div />
     </div>
   </div>
 </div>

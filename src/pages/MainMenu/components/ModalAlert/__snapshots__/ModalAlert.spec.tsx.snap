@@ -3,5 +3,7 @@
 exports[`ModalAlert test should match with snapshot 1`] = `
 <div
   aria-hidden="true"
-/>
+>
+  <div />
+</div>
 `;

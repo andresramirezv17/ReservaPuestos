@@ -80,7 +80,7 @@ exports[`CardSearchWorkSpace test it should match snapshot 1`] = `
               </div>
               <button
                 class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-buttonReserve-6"
-                data-testid="reservar"
+                data-testid="reserveBtn"
                 tabindex="0"
                 type="button"
               >

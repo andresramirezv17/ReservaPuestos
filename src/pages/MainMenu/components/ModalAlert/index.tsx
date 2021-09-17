@@ -34,37 +34,39 @@ export const ModalAlert: React.FC<ModalProps> = ({
   error,
 }) => {
   return (
-    <Dialog
-      open={showModal}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <DialogTitle id="alert-dialog-title">{Title}</DialogTitle>
-      <DialogContent>
-        <DialogContentText id="alert-dialog-description">
-          {body}
-        </DialogContentText>
-        {error !== '' && (
-          <Typography style={{ color: 'red' }}>{error}</Typography>
-        )}
-      </DialogContent>
-      <DialogActions>
-        <Button
-          data-testid="cancel"
-          color="primary"
-          onClick={() => showAlert(false, action)}
-        >
-          {btnCancel}
-        </Button>
-        <Button
-          data-testid="continue"
-          color="primary"
-          autoFocus
-          onClick={() => handleAction(action)}
-        >
-          {btnContinue}
-        </Button>
-      </DialogActions>
-    </Dialog>
+    <div>
+      <Dialog
+        open={showModal}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">{Title}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            {body}
+          </DialogContentText>
+          {error !== '' && (
+            <Typography style={{ color: 'red' }}>{error}</Typography>
+          )}
+        </DialogContent>
+        <DialogActions>
+          <Button
+            data-testid="cancelModal"
+            color="primary"
+            onClick={() => showAlert(false, action)}
+          >
+            {btnCancel}
+          </Button>
+          <Button
+            data-testid="continueModal"
+            color="primary"
+            autoFocus
+            onClick={() => handleAction(action)}
+          >
+            {btnContinue}
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
   );
 };

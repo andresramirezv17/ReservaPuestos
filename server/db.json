@@ -17,13 +17,13 @@
     {
       "building": "Torre Central",
       "endHour": "17:00",
-      "floor": "Piso 1",
+      "floor": "Piso 2",
       "initialHour": "7:00",
       "isChekin": false,
-      "section": "Sección A",
-      "date": "17/09/2021",
-      "workplace": "P1A2",
-      "idWorkSpace": 2,
+      "section": "Sección D",
+      "date": "23/09/2021",
+      "workplace": "P2D2",
+      "idWorkSpace": 12,
       "id": 2
     },
     {
@@ -32,10 +32,10 @@
       "floor": "Piso 1",
       "initialHour": "7:00",
       "isChekin": false,
-      "section": "Sección A",
-      "date": "20/09/2021",
-      "workplace": "P1A1",
-      "idWorkSpace": 1,
+      "section": "Sección B",
+      "date": "28/09/2021",
+      "workplace": "P1B3",
+      "idWorkSpace": 15,
       "id": 3
     }
   ],
@@ -81,21 +81,22 @@
   },
   "workspaces": [
     {
-      "id": 1,
       "workplace": "P2D1",
-      "available": true,
       "building": "Torre Central",
       "floor": "Piso 1",
       "section": "Sección A",
+      "available": true,
       "initialHour": "7:00",
-      "endHour": "5:00"
+      "endHour": "5:00",
+      "isChekin": false,
+      "id": 1
     },
     {
       "workplace": "P1A2",
       "building": "Torre Central",
       "floor": "Piso 1",
       "section": "Sección A",
-      "available": false,
+      "available": true,
       "initialHour": "7:00",
       "endHour": "17:00",
       "isChekin": false,
@@ -205,7 +206,7 @@
     {
       "id": 12,
       "workplace": "P2D2",
-      "available": true,
+      "available": false,
       "building": "Torre Central",
       "floor": "Piso 2",
       "section": "Sección D",
@@ -218,7 +219,7 @@
       "building": "Torre Central",
       "floor": "Piso 1",
       "section": "Sección A",
-      "available": true,
+      "available": false,
       "initialHour": "7:00",
       "endHour": "17:00",
       "isChekin": false,
@@ -240,7 +241,7 @@
       "building": "Torre Central",
       "floor": "Piso 1",
       "section": "Sección B",
-      "available": true,
+      "available": false,
       "initialHour": "7:00",
       "endHour": "17:00",
       "isChekin": false,

@@ -33,22 +33,18 @@ export const FormSearchWorkspace: React.FC = () => {
 
   const {
     data: { building, floors, sections },
-    mutations: {
-      changeParameter,
-      obtainFloors,
-      obtainSections,
-      searchWorkplaces,
-    },
+    mutations: { changeParameter, obtainFloors, searchWorkplaces },
   } = useContext(ReserveContext);
 
-  const handleSearch = () => {
-    searchWorkplaces();
-  };
+  useEffect(() => {
+    if (floors.floorsResult?.length !== 0) {
+      setfloor('Piso 1');
+      setsection('Sección A');
+    }
+  }, [floors]);
 
   useEffect(() => {
     obtainFloors();
-    setfloor('Piso 1');
-    setsection('Sección A');
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleDateChange = (date: Date | null) => {
@@ -79,7 +75,11 @@ export const FormSearchWorkspace: React.FC = () => {
         }}
         variant="outlined"
       />
-      <FormControl variant="outlined" className={classes.formControl}>
+      <FormControl
+        variant="outlined"
+        className={classes.formControl}
+        data-testid="floorForm"
+      >
         <InputLabel id="demo-simple-select-outlined-label">Piso</InputLabel>
         <Select
           labelId="demo-simple-select-outlined-label"
@@ -87,24 +87,30 @@ export const FormSearchWorkspace: React.FC = () => {
           value={floor}
           defaultValue="1"
           label="Piso"
-          data-testid="floor"
           onChange={(event: React.ChangeEvent<{ value: unknown }>) => {
             setfloor(event.target.value as string);
             changeParameter('piso', event.target.value as string);
           }}
         >
           {floors.floorsResult?.map((item, index) => (
-            <MenuItem key={item.idFloor} value={item.name}>
+            <MenuItem
+              data-testid="floorOption"
+              key={item.idFloor}
+              value={item.name}
+            >
               {item.name}
             </MenuItem>
           ))}
         </Select>
       </FormControl>
 
-      <FormControl variant="outlined" className={classes.formControl}>
+      <FormControl
+        variant="outlined"
+        className={classes.formControl}
+        data-testid="sectionForm"
+      >
         <InputLabel id="demo-simple-select-outlined-label">Sección</InputLabel>
         <Select
-          data-testid="section"
           labelId="demo-simple-select-outlined-label"
           id="demo-simple-select-outlined"
           value={section}
@@ -115,7 +121,11 @@ export const FormSearchWorkspace: React.FC = () => {
           }}
         >
           {sections.sectionsResult?.map((item, index) => (
-            <MenuItem key={item.idSection} value={item.name}>
+            <MenuItem
+              data-testid="sectionOption"
+              key={item.idSection}
+              value={item.name}
+            >
               {item.name}
             </MenuItem>
           ))}
@@ -127,7 +137,7 @@ export const FormSearchWorkspace: React.FC = () => {
             style={{
               marginLeft: '13px',
             }}
-            data-testid="date"
+            data-testid="dateSelector"
             value={selectedDate}
             onChange={handleDateChange}
             label="Fecha"
@@ -156,7 +166,7 @@ export const FormSearchWorkspace: React.FC = () => {
       </MuiPickersUtilsProvider>
       <Button
         className={classes.btnSearch}
-        onClick={handleSearch}
+        onClick={() => searchWorkplaces()}
         data-testid="searchW"
       >
         Buscar Puestos
